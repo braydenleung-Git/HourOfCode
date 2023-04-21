@@ -10,11 +10,12 @@ You might also want to consider using functions to organize your code and make i
 And if you want to challenge yourself, you could even create a Calculator class to encapsulate the calculator logic and make your code more object-oriented.
 */
 //Note to self, there was a infinite loop
+//change it to number based operator, and redo validation method or remove it
 #include <iostream>
 using namespace std;
 int val1 = 0;
 int val2 = 0;
-char op = ' ';
+string op = NULL;
 int sign = 1;
 int ans = 0;
 void input();
@@ -22,21 +23,22 @@ bool validation();
 int main(){
     input();
     switch(op){
-        case '+':
+        case "+":
             cout<<val1 + val2;
             break;
-        case '-':
+        case "-":
             cout<<val1 - val2;
             break;
-        case '*':
+        case "*":
             cout<<val1*val2;
             break;
-        case '/':
+        case "/":
             cout<<val1/val2;
             break;
     }
     return 0;
 }
+
 void input(){
     cout<<"Please insert number 1";
     cin>>val1;
@@ -46,9 +48,11 @@ void input(){
             cout<<"Please insert number 1";
             cin>>val1;
         }
-        
+        else{
+            break;
+        }
     }
-    sign =1;
+    sign = 1;
     cout<<"Please insert number 2";
     cin>>val2;
     while(sign != 0)
@@ -57,16 +61,21 @@ void input(){
             cout<<"Please insert number 2";
             cin>>val2;
         }
-        
+        else{
+            break;
+        }
     }
     sign =1;
     cout<<"Please insert operator";
     cin>>op;
     while(sign != 0)
     {
-        if(validation()|| op != '+'|| op != '-' || op != '*' || op != '/' ){
+        if(validation()|| op != "+"|| op != "-" || op != "*" || op != "/" ){
             cout<<"Please insert operator";
             cin>>op;
+        }
+        else{
+            break;
         }
     }
     sign =1;
