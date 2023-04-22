@@ -15,7 +15,7 @@ And if you want to challenge yourself, you could even create a Calculator class 
 using namespace std;
 int val1 = 0;
 int val2 = 0;
-string op = NULL;
+char op = ' ';
 int sign = 1;
 int ans = 0;
 void input();
@@ -23,17 +23,17 @@ bool validation();
 int main(){
     input();
     switch(op){
-        case "+":
-            cout<<val1 + val2;
+        case '+':
+            cout<<val1 + val2<<endl;
             break;
-        case "-":
-            cout<<val1 - val2;
+        case '-':
+            cout<<val1 - val2<<endl;
             break;
-        case "*":
-            cout<<val1*val2;
+        case '*':
+            cout<<val1*val2<<endl;
             break;
-        case "/":
-            cout<<val1/val2;
+        case '/':
+            cout<<val1/val2<<endl;
             break;
     }
     return 0;
@@ -70,7 +70,7 @@ void input(){
     cin>>op;
     while(sign != 0)
     {
-        if(validation()|| op != "+"|| op != "-" || op != "*" || op != "/" ){
+        if(validation() || (op != '+' && op != '-' && op != '*' && op != '/')){
             cout<<"Please insert operator";
             cin>>op;
         }
