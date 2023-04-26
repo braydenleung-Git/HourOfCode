@@ -16,7 +16,7 @@
             "externalConsole": true,
             "MIMode": "lldb",
             //"preLaunchTask": "kill previous terminal window",
-            //"preLaunchTask": "C/C++: clang++ build active file",
+            "preLaunchTask": "C/C++: clang++ build active file",
         }
         
     ]
