@@ -16,3 +16,78 @@ Bangladesh	169
 Russia	146
 Mexico	129
 */
+/*
+new data set
+Brazil	213.5 - 
+Canada	37.6 - 
+China	1400.0 - 
+Egypt	100.4 - 
+France	66.99 - 
+Germany	83.1 - 
+India	1366.0 - 
+Indonesia	273.5 - 
+Italy	60.4 - 
+Japan	126.3 -
+Mexico	130.2 - 
+Nigeria	206.1 - 
+Pakistan 220.9 - 
+Russia	144.5 - 
+South Korea	51.64 - 
+Turkey	82.0 -
+United Kingdom	66.65 - 
+United States	328.2 - 
+*/
+#include <iostream>
+
+using namespace std;
+int main(){
+    string countries{"Brazil", "Canada", "China", "Egypt","France","Germany","India","Indonesia","Italy","Japan","Mexico","Nigeria","Pakistan","Russia","South Korea","Turkey","United Kingdom","United States"};
+    double population{213.5,37.6,1400.0,100.4,66.99,83.1 ,1366.0,273.5,60.4,126.3,130.2,206.1,220.9,144.5,51.64,82.0,66.65,328.2};
+    string input = NULL;
+    while(true){
+    cout<<"Please insert the Country name"<<endl;
+    cin >> input;
+    if(!cin.fail()){
+        break;
+    }
+    }
+    char firstletter = input.at(0);
+    int count =0; 
+    if(firstletter<102)
+    {
+        for(int x = 97; x<102; x++)
+        {
+            if(firstletter == countries[x-97])
+            {
+                count = x-97;
+                break;
+            }
+        }
+    }
+    else if(firstletter<109)
+    {
+        for(int x = 102; x<109; x++)
+        {
+            if(firstletter == countries[x-97])
+            {
+                count = x-97;
+                break;
+            }
+        }
+    }
+    else if(firstletter<=122)
+    {
+        for(int x = 102; x<109; x++)
+        {
+            if(firstletter == countries[x-97])
+            {
+                count = x-97;
+                break;
+            }
+        }
+    
+}
+/*
+97     102    109           122 
+abcdef ghijkl mnopqr stuvwxyz
+*/
