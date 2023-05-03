@@ -51,24 +51,25 @@ int main(){
             break;
         }
     }
-    char firstLetter = input.at(0);
+    unsigned char firstLetter = input.at(0);
     int count =-1; 
-    int asciiFirstLetter = (int)firstLetter;
-    if (asciiFirstLetter >= 97 && asciiFirstLetter <= 101) {
+    if (firstLetter >= 97 &&firstLetter <= 101) {
         for(int x = 0; x< 5 ;x++){
             if(input == countries[x]){
                 count = x;
                 break;
             }
         }
-    } else if (asciiFirstLetter >= 102 && asciiFirstLetter <= 108) {
+    }
+    if (firstLetter >= 102 &&firstLetter <= 108) {
         for(int x = 5; x< 11 ;x++){
             if(input == countries[x]){
                 count = x;
                 break;
             }
         }
-    } else if (asciiFirstLetter >= 109 && asciiFirstLetter <= 122) {
+    }
+    if (firstLetter >= 109 &&firstLetter <= 122) {
         for(int x = 11; x< 18 ;x++){
             if(input == countries[x]){
                 count = x;
@@ -78,10 +79,9 @@ int main(){
     }
     if(count ==-1){
         cout<<"Invalid countries was inputted.";
+        return 0;
     }
-    else{
         cout<<"The population of "<<countries[count]<<" Is"<< population[count]<<endl;
-    }
     return 0;
 }
 /*
