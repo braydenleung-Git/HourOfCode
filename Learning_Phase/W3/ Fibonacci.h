@@ -5,14 +5,15 @@ This is the fibonacci "class(i think)" which allows me to call it to find the fi
 #include <iostream>
 
 using namespace std;
+class Fibonacci {
+    public:
+    static int returnFib(int input);
+};
 
-class Fibbonacci(){
-    
-}
-int returnFib(int input){
+int Fibonacci::returnFib(int input){
     //this is here because fibonacci number only works with positive integer 
-    if( input <= 0){
+    if(input <= 0){
         return 0;
     }
-    return fibonacci(input-1) + fibonacci(input -2);
+    return returnFib(input-1) + returnFib(input -2);
 }
