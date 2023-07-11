@@ -1,8 +1,8 @@
 
 /*
-This is the fibonacci "class(i think)" which allows me to call it to find the fibbonacci of a certain number based on input
+This is the fibonacci "class(i think)" which allows me to call it to find the
+fibbonacci of a certain number based on input
 */
-#include <iostream>
 
 using namespace std;
 class Fibonacci {
