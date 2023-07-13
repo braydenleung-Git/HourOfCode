@@ -29,5 +29,5 @@ int fibonacci(int input){
     if( input <= 0){
         return 0;
     }
-    return fibonacci(input-1) + fibonacci(input -2);
+    return input + returnFib(input -1);;
 }

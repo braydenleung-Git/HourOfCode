@@ -6,12 +6,12 @@ then prints the first N terms of the Fibonacci sequence.
 #include " Fibonacci.h"
 #include "../Basic.h"
 
-static int input();
-int input_N = 0;
-Fibonacci object;
+static void input();
+int input_Value =0;
+string random_value ="";
 int main(){
-    input_N = input();
-    for(int x =input_N; x>0;x ++){
+    input();
+    for(int x = 0; x<input_Value ;x ++){
         std::cout<< Fibonacci::returnFib(x)<<" ";
     }
     cout<<endl;
@@ -19,12 +19,10 @@ int main(){
     return 0;
 }
 
-int input(){
-    int input_Value =0;
-    std :: cout<<"Please insert number"<<endl;
+void input(){
+    std :: cout<<"Please insert number : ";
     while(true){
         std :: cin>> input_Value;
-        std :: cout<<endl;
         if(cin.fail()){
             cout<<"Error, invalid input";
             cout<<"Please insert valid number";
@@ -34,5 +32,4 @@ int input(){
             break;
         }
     };
-    return input_Value;
 }
