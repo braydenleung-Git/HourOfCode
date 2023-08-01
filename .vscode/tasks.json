@@ -75,7 +75,7 @@
         {
         "label": "Build",
         "dependsOn": [
-            "kill previous terminal window",
+            //"kill previous terminal window",
             "C/C++: clang++ build active file",
         ]
     }
