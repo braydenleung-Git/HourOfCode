@@ -13,7 +13,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "../build_output/${fileBasenameNoExtension}"
+                "${workspaceFolder}/build_output/${fileBasenameNoExtension}"
             ],
             "options": {
                 "cwd": "${fileDirname}"

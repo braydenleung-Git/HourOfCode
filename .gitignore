@@ -2,3 +2,4 @@
 vcpkg
 .ccls-cache/
 *.dSYM
+./build_output
