@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 int main(){
 
     cout<<"Pattern A"<<endl;
@@ -58,5 +59,40 @@ int main(){
     }
     
     return 0;
+    /*
+        print out "Press space bar to draw card...";
+        recieve  user input;
+        if user input equals to space {
+            draw card();
+        }
+        else if user input equals to 'q'{
+
+        }
+        else{
+            print out wrong input
+        }
+        
+        ============[Actual code]==========
+
+        cout<< "something";
+        char input = '';
+        while(input != 'q'){
+            cin>>input;
+            if(input == ' '){
+                drawcard();
+            }
+            else if(input == 'q'){
+                quit();
+            }
+            else{
+                cout<<"wrong input";
+                cout<<"press enter to continue";
+                cout<<"press space to draw card";
+            }
+        }
+    */
 
 }
+
+
+
